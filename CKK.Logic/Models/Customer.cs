@@ -32,7 +32,7 @@ namespace CKK.Logic.Models
             _name = name;
         }
 
-        public string GetAdress()
+        public string GetAddress()
         {
             return _address;
         }
