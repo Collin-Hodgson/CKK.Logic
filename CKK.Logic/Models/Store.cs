@@ -84,7 +84,7 @@
             return null;
         }
 
-        public Product FindStorItemById(int id)
+        public Product FindStoreItemById(int id)
         {
             if (id == _product1.GetId())
             {
