@@ -19,27 +19,22 @@
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            
         }
 
         public ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
-
         }
 
         public ShoppingCartItem GetProductById(int id)
         {
-            
         }
 
         public decimal GetTotal()
         {
-
         }
 
         public ShoppingCartItem GetProduct(int productNum)
         {
-
         }
     }
 }
