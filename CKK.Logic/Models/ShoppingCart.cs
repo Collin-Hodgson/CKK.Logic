@@ -4,7 +4,7 @@
     {
         private Customer Customer;
         private ShoppingCartItem Product1;
-        private ShoppingCartItem product2;
+        private ShoppingCartItem Product2;
         private ShoppingCartItem Product3;
 
         public ShoppingCart(Customer customer)
@@ -27,6 +27,19 @@
 
         public ShoppingCartItem GetProductById(int id)
         {
+            if (Product1.GetProduct().GetId() == id)
+            {
+                return Product1;
+            }    
+            else if (Product2.GetProduct().GetId() == id)
+            {
+                return Product2;
+            }
+            else if (Product3.GetProduct().GetId() == id)
+            {
+                return Product3;
+            }
+            return null;
         }
 
         public decimal GetTotal()
