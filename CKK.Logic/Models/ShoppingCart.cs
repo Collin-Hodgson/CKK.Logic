@@ -48,6 +48,19 @@
 
         public ShoppingCartItem GetProduct(int productNum)
         {
+            if (productNum == 1)
+            {
+                return Product1;
+            }
+            else if (productNum == 2)
+            {
+                return Product2;
+            }
+            else if (productNum == 3)
+            {
+                return Product3;
+            }
+            return null;
         }
     }
 }
