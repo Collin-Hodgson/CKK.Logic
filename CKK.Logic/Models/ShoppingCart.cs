@@ -44,6 +44,11 @@
 
         public decimal GetTotal()
         {
+            decimal total1 = Product1.GetProduct().GetPrice() * Product1.GetQuantity();
+            decimal total2 = Product2.GetProduct().GetPrice() * Product2.GetQuantity();
+            decimal total3 = Product3.GetProduct().GetPrice() * Product3.GetQuantity();
+
+            return total1 + total2 + total3;
         }
 
         public ShoppingCartItem GetProduct(int productNum)
