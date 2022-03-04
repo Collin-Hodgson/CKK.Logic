@@ -29,10 +29,19 @@ namespace CKK.Test.Models
         public void RemoveProductSuccessfully()
         {
             // Arrange
+            Customer testCustomer = new Customer();
+            Product testProduct = new Product();
+            ShoppingCart testCart = new ShoppingCart(testCustomer);
 
             // Act
+            testProduct.SetId(1);
+            testCustomer.SetId(1);
+
+            testCart.AddProduct(testProduct, 5).GetQuantity();
+            int ActualRemove = testCart.RemoveProduct(testProduct, 4).GetQuantity();
 
             // Assert
+            Assert.Equal(1, ActualRemove);
 
         }
 
