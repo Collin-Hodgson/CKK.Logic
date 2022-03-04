@@ -57,6 +57,7 @@
 
         public ShoppingCartItem AddProduct(Product prod)
         {
+            return AddProduct(prod, 1);
         }
 
         public ShoppingCartItem RemoveProduct(Product prod, int quantity)
