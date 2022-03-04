@@ -40,6 +40,19 @@
                 Product2.SetQuantity(Product2.GetQuantity() + quantity);
                 return Product2;
             }
+
+            else if (Product3 != null && Product3.GetProduct().GetId() == prod.GetId())
+            {
+                if (quantity < 1)
+                {
+                    return null;
+                }
+
+                Product3.SetQuantity(Product3.GetQuantity() + quantity);
+                return Product3;
+            }
+
+            return null;
         }
 
         public ShoppingCartItem AddProduct(Product prod)
