@@ -33,6 +33,17 @@
                 Product1.SetQuantity(Product1.GetQuantity() - quantity);
                 return Product1;
             }
+
+            if (Product2 != null && Product2.GetProduct().GetId() == prod.GetId())
+            {
+                if (quantity < 1)
+                {
+                    return null;
+                }
+
+                Product2.SetQuantity(Product2.GetQuantity() - quantity);
+                return Product2;
+            }
         }
 
         public ShoppingCartItem GetProductById(int id)
