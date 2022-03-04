@@ -23,6 +23,10 @@
 
         public ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
+            if (Product1 != null && Product1.GetProduct().GetId() == prod.GetId())
+            {
+                Product1.GetProduct
+            }
         }
 
         public ShoppingCartItem GetProductById(int id)
