@@ -51,6 +51,21 @@
                 Product3.SetQuantity(Product3.GetQuantity() + quantity);
                 return Product3;
             }
+            else if (Product1 == null)
+            {
+                Product1 = new ShoppingCartItem(prod, quantity);
+                return Product1;
+            }
+            else if (Product2 == null)
+            {
+                Product2 = new ShoppingCartItem(prod, quantity);
+                return Product2;
+            }
+            else if (Product3 == null)
+            {
+                Product3 = new ShoppingCartItem(prod, quantity);
+                return Product3;
+            }
 
             return null;
         }

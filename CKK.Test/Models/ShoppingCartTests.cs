@@ -1,4 +1,5 @@
-﻿using CKK.Logic.Models;
+﻿using System;
+using CKK.Logic.Models;
 using Xunit;
 
 namespace CKK.Test.Models
@@ -8,21 +9,20 @@ namespace CKK.Test.Models
         [Fact]
         public void AddProductSuccessfully()
         {
-            // Arrange
-            Customer testCustomer = new Customer();
-            Product testProduct = new Product();
-            ShoppingCart testCart = new ShoppingCart(testCustomer);
+                // Arrange
+                Customer testCustomer = new Customer();
+                Product testProduct = new Product();
+                ShoppingCart testCart = new ShoppingCart(testCustomer);
 
 
-            // Act
-            testProduct.SetId(1);
-            testCustomer.SetId(1);
+                // Act
+                testProduct.SetId(1);
+                testCustomer.SetId(1);
 
-            int Actual = testCart.AddProduct(testProduct, 2).GetQuantity();
+                int Actual = testCart.AddProduct(testProduct, 2).GetQuantity();
 
-            // Assert
-            Assert.Equal(2, Actual);
-
+                // Assert
+                Assert.Equal(2, Actual);
         }
 
         [Fact]
