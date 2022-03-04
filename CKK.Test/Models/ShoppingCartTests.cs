@@ -49,6 +49,8 @@ namespace CKK.Test.Models
         public void GetTotalSuccessfully()
         {
             // Arrange
+            decimal testPrice = 2;
+            int quantity = 2;
             Customer testCustomer = new Customer();
             ShoppingCart testShopping = new ShoppingCart(testCustomer);
             Product testProduct1 = new Product();
@@ -60,18 +62,18 @@ namespace CKK.Test.Models
             testProduct2.SetId(2);
             testProduct3.SetId(3);
 
-            testProduct1.SetPrice(1);
-            testProduct2.SetPrice(1);
-            testProduct3.SetPrice(1);
+            testProduct1.SetPrice(testPrice);
+            testProduct2.SetPrice(testPrice);
+            testProduct3.SetPrice(testPrice);
 
-            testShopping.AddProduct(testProduct1, 2);
-            testShopping.AddProduct(testProduct2, 2);
-            testShopping.AddProduct(testProduct3, 2);
+            testShopping.AddProduct(testProduct1, quantity);
+            testShopping.AddProduct(testProduct2, quantity);
+            testShopping.AddProduct(testProduct3, quantity);
 
             decimal Actual = testShopping.GetTotal();
 
             // Assert
-            Assert.Equal(6, Actual);
+            Assert.Equal(12, Actual);
 
         }
     }
