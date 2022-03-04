@@ -25,7 +25,13 @@
         {
             if (Product1 != null && Product1.GetProduct().GetId() == prod.GetId())
             {
-                Product1.GetProduct
+                if (quantity < 1)
+                {
+                    return null;
+                }
+
+                Product1.SetQuantity(Product1.GetQuantity() - quantity);
+                return Product1;
             }
         }
 
