@@ -17,6 +17,31 @@
             return Customer.GetId();
         }
 
+        public ShoppingCartItem AddProduct(Product prod, int quantity)
+        {
+            if (Product1 != null && Product1.GetProduct().GetId() == prod.GetId())
+            {
+                if (quantity < 1)
+                {
+                    return null;
+                }
+
+                Product1.SetQuantity(Product1.GetQuantity() + quantity);
+                return Product1;
+            }
+
+            else if (Product2 != null && Product2.GetProduct().GetId() == prod.GetId())
+            {
+                if (quantity < 1)
+                {
+                    return null;
+                }
+
+                Product2.SetQuantity(Product2.GetQuantity() + quantity);
+                return Product2;
+            }
+        }
+
         public ShoppingCartItem AddProduct(Product prod)
         {
         }
