@@ -1,6 +1,6 @@
 ﻿namespace CKK.Logic.Models
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
         private Customer Customer;
         private ShoppingCartItem Product1;
