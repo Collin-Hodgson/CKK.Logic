@@ -9,20 +9,20 @@ namespace CKK.Test.Models
         [Fact]
         public void AddProductSuccessfully()
         {
-                // Arrange
-                Customer testCustomer = new Customer();
-                Product testProduct = new Product();
-                ShoppingCart testCart = new ShoppingCart(testCustomer);
+            // Arrange
+            Customer testCustomer = new Customer();
+            Product testProduct = new Product();
+            ShoppingCart testCart = new ShoppingCart(testCustomer);
 
 
-                // Act
-                testProduct.SetId(1);
-                testCustomer.SetId(1);
+            // Act
+            testProduct.SetId(1);
+            testCustomer.SetId(1);
 
-                int Actual = testCart.AddProduct(testProduct, 2).GetQuantity();
+            int Actual = testCart.AddProduct(testProduct, 2).GetQuantity();
 
-                // Assert
-                Assert.Equal(2, Actual);
+            // Assert
+            Assert.Equal(2, Actual);
         }
 
         [Fact]
@@ -38,7 +38,7 @@ namespace CKK.Test.Models
             testProduct.SetId(1);
             testCustomer.SetId(1);
 
-            var Actual = testCart.AddProduct(testProduct, -1);
+            var Actual = testCart.AddProduct(testProduct, -13);
 
             // Assert
             Assert.Null(Actual);

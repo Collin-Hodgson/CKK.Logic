@@ -19,6 +19,11 @@
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
+            if (quantity < 1)
+            {
+                return null;
+            }
+
             if (Product1 != null && Product1.GetProduct().GetId() == prod.GetId())
             {
                 if (quantity < 1)
