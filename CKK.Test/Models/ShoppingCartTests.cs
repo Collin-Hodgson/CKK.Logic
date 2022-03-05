@@ -28,7 +28,7 @@ namespace CKK.Test.Models
             }
             catch
             {
-                new Exception("Error: Product could not be added");
+                throw new Exception("Error: Product could not be added");
             }
         }
 
