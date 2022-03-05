@@ -38,7 +38,7 @@ namespace CKK.Test.Models
             testProduct.SetId(1);
             testCustomer.SetId(1);
 
-            var Actual = testCart.AddProduct(testProduct, -13);
+            var Actual = testCart.AddProduct(testProduct, -1);
 
             // Assert
             Assert.Null(Actual);
