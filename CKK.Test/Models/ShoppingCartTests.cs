@@ -9,8 +9,6 @@ namespace CKK.Test.Models
         [Fact]
         public void AddProductSuccessfully()
         {
-            try
-            {
                 // Arrange
                 Customer testCustomer = new Customer();
                 Product testProduct = new Product();
@@ -25,12 +23,25 @@ namespace CKK.Test.Models
 
                 // Assert
                 Assert.Equal(2, Actual);
+        }
 
-            }
-            catch
-            {
-                throw new ArgumentNullException();
-            }
+        [Fact]
+        public void AddProductUnsuccessfully()
+        {
+            // Arrange
+            Customer testCustomer = new Customer();
+            Product testProduct = new Product();
+            ShoppingCart testCart = new ShoppingCart(testCustomer);
+
+
+            // Act
+            testProduct.SetId(1);
+            testCustomer.SetId(1);
+
+            var Actual = testCart.AddProduct(testProduct, -1);
+
+            // Assert
+            Assert.Null(Actual);
         }
 
         [Fact]
